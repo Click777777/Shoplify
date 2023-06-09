@@ -20,7 +20,7 @@ const Home = () => {
       <section id="productSection" className="py-16">
         <div className=" container mx-auto">
           <div className="cursor-default text-center">
-            <h1 className=" text-shadow mb-8 inline-block text-center text-[30px] font-semibold">
+            <h1 className=" text-shadow mb-8 inline-block text-center text-[30px] font-medium text-black transition-all duration-700 ease-in-out">
               Our Proucts
             </h1>
           </div>
