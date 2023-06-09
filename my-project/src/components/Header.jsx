@@ -16,6 +16,13 @@ const Header = () => {
     });
   });
 
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header
       className={`${
@@ -23,7 +30,7 @@ const Header = () => {
       } fixed z-10 w-full transition-all`}
     >
       <div className="container mx-auto flex h-full items-center justify-between">
-        <Link to={"/"}>
+        <Link to={"/"} onClick={handleClick}>
           <img src={Logo} alt="Logo" className="w-[40px]" />
         </Link>
         <div

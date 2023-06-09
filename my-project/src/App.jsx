@@ -1,15 +1,16 @@
-import { Route, Routes } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   return (
     <div className="overflow-hidden">
-      <Router>
+      <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -17,7 +18,7 @@ const App = () => {
         </Routes>
         <SideBar />
         <Footer />
-      </Router>
+      </BrowserRouter>
     </div>
   );
 };

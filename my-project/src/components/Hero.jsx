@@ -1,8 +1,13 @@
-// import React from "react";
-import { Link } from "react-router-dom";
 import hero from "../img/woman_hero.png";
 
 const Hero = () => {
+  const handleClickScroll = () => {
+    const productSection = document.getElementById("productSection");
+    if (productSection) {
+      productSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="h-[800px] bg-bgHero bg-cover bg-center bg-no-repeat py-24">
       <div className="container float-right mx-auto flex h-full items-center justify-around">
@@ -16,8 +21,11 @@ const Hero = () => {
             <span className="font-normal">with you</span>
           </div>
 
-          <div className="mt-4 self-start border-b-2 border-primary">
-            <Link>shop it now</Link>
+          <div
+            className="mt-4 cursor-pointer self-start border-b-2 border-primary"
+            onClick={handleClickScroll}
+          >
+            shop it now
           </div>
         </div>
 
