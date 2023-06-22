@@ -35,7 +35,7 @@ const CardItem = ({ item }) => {
             <div className="flex h-[36px] gap-x-2  text-sm">
               <div className="flex h-full max-w-[100px] flex-1 items-center border font-medium text-primary">
                 <div
-                  className="flex h-full flex-1 cursor-pointer items-center justify-center text-xs"
+                  className="flex h-full flex-1 cursor-pointer select-none items-center justify-center text-xs"
                   onClick={() => reduceItem(item.id)}
                 >
                   <AiOutlineMinus />
@@ -44,7 +44,7 @@ const CardItem = ({ item }) => {
                   {item.amount}
                 </div>
                 <div
-                  className="flex h-full flex-1 cursor-pointer items-center justify-center text-xs"
+                  className="flex h-full flex-1 cursor-pointer select-none items-center justify-center text-xs"
                   onClick={() => addItem(item, item.id)}
                 >
                   <AiOutlinePlus />

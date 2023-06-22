@@ -3,6 +3,7 @@ import { ProductContext } from "../contexts/ProductContext";
 import Product from "../components/Product";
 import Hero from "../components/Hero";
 import ScrollToTop from "../ScrollToTop";
+import Alert from "../components/Alert";
 
 const Home = () => {
   const { products } = useContext(ProductContext);
@@ -31,6 +32,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Alert />
     </>
   );
 };

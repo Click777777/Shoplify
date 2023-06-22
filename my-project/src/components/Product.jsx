@@ -42,6 +42,12 @@ const Product = ({ item }) => {
           <h2 className="mb-1 font-semibold">{item.title}</h2>
         </Link>
         <div className=" font-medium">$ {item.price}</div>
+        <button
+          className="mt-2 rounded-sm bg-primary px-4 py-2 text-xs uppercase text-white lg:hidden"
+          onClick={() => addToCart(item, item.id)}
+        >
+          add to cart
+        </button>
       </div>
     </div>
   );

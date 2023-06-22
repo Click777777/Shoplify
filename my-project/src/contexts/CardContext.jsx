@@ -7,7 +7,9 @@ const CardProvider = ({ children }) => {
   const [itemAmount, setItemAmount] = useState(0);
   const [total, setTotal] = useState(0);
   const [cart, setCart] = useState([]);
+  const [isAlert, setIsAlert] = useState(false);
   // console.log("cart", cart);
+  console.log(isAlert);
 
   useEffect(() => {
     const reduceFun = (accumulator, cartItem) => {
@@ -45,6 +47,11 @@ const CardProvider = ({ children }) => {
     } else {
       setCart([...cart, newItem]);
     }
+
+    setIsAlert(true);
+    setTimeout(() => {
+      setIsAlert(false);
+    }, 2000);
   };
 
   const removeCartItem = (id) => {
@@ -91,6 +98,8 @@ const CardProvider = ({ children }) => {
         reduceItem,
         addItem,
         removeAllItem,
+        isAlert,
+        setIsAlert,
       }}
     >
       {children}
